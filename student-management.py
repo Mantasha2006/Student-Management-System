@@ -1,4 +1,10 @@
-students ={}
+import json
+try:
+
+    with open("student.json", "r") as f:
+        students= json.load(f)
+except FileNotFoundError:
+    students ={}
 
 while True:
     print("......Student Management System.......")
@@ -28,6 +34,9 @@ while True:
                 "Course":Course,
                 "Marks":Marks
             }
+
+            with open("student.json", "w") as f:
+                json.dump(students , f , indent=4)
 
             print("Student record added successfully!")
 
@@ -59,8 +68,15 @@ while True:
             print("Student not found")
 
     elif choice== "4":
+        student_id = input("Enter studentID of the students you want to delete:")
+        
         if student_id in students:
+        
             del students[student_id]
+
+            with open("student.json", "w") as f:
+                json.dump(students, f , indent=4)
+
             print("Student deleted successfully!")
 
         else:
@@ -73,4 +89,3 @@ while True:
         print("Invalid choice")
 
 
-    

@@ -1,0 +1,20 @@
+{
+    "101": {
+        "name": "Ayesha",
+        "Age": 18,
+        "Course": "BCA",
+        "Marks": 80
+    },
+    "102": {
+        "name": "mahek",
+        "Age": 20,
+        "Course": "BCA",
+        "Marks": 90
+    },
+    "103": {
+        "name": "Madiha",
+        "Age": 19,
+        "Course": "BCS",
+        "Marks": 80
+    }
+}
